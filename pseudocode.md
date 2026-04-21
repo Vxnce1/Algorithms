@@ -1,10 +1,12 @@
-//input integer from 0-100
-//let numberGuess
+# Pseudocode for the psychic algorithm
 
-//1st question:
-//if yesbutton === pressed;
-//numberGuess >= 50;
-//elif nobutton === pressed;
-//numberGuess <= 40;
+input integer from 0-100
+let numberGuess
 
-//output numberGuess random
+1st question:
+    if yesbutton === pressed;
+        numberGuess >= 50;
+    elif nobutton === pressed;
+        numberGuess <= 40;
+
+output numberGuess random
