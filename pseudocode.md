@@ -2,28 +2,34 @@
 
 input integer from 0-100
 let numberGuess;
-let SumofAns = 0;
+
+let Choice ;
 let guesses = [];
 let totalAns;
 
+class Question 
+
+from question 1 to question 10: 
+
 1st question:
     if yesbutton === pressed;
-        SumofAns += 3
+        Choice += 2
     elif nobutton === pressed;
-        SumofAns += 1;
-    push SumofAns => guesses array
+        Choice += 1;
+    elif Misc === pressed;
+        Choice += 3;
+    push Choice => guesses array
 
-...10th question
+question++
 
-for let i = 0, from i to guesses.length 
-    let guessinArray = guesses[i]
+    //store the ints from ans into the array
 
-    totalAns += guessinArray
 
-plug variables into array
-numberGuess = equation
+if all the answers are answered
+    calculateGuess()
 
-//find the mean difference and scale weighted value
+calculateGuess ()
+    numberGuess = (q1 * weight1) + (q2 * weight2) ... (q10 * w10)
 
-print(userNum) 
-print(numberGuess)
+    print(userNum) 
+    print(numberGuess)
