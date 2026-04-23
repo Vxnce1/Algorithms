@@ -26,6 +26,7 @@ question++
 
 
 if all the answers are answered
+    clearCanvas
     calculateGuess()
 
 calculateGuess ()
