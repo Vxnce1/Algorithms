@@ -9,16 +9,32 @@ let totalAns;
 
 class Question 
 
-from question 1 to question 10: 
+for each question:
+    if yes/no type question;
+        if yesbutton === pressed;
+            Choice = 2
+        if nobutton === pressed;
+            Choice = 1;
 
-1st question:
-    if yesbutton === pressed;
-        Choice += 2
-    elif nobutton === pressed;
-        Choice += 1;
-    elif Misc === pressed;
-        Choice += 3;
-    push Choice => guesses array
+    if starbucks type question;
+        if tall === pressed;
+            Choice = 1;
+        if grande === pressed;
+            Choice = 2;
+        if venti === pressed;
+            Choice = 3;
+
+    if seasons type question;
+        if fall === pressed;
+            Choice = 1;
+        if winter === pressed;
+            Choice = 2;
+        if spring === pressed;
+            Choice = 3;
+        if summer === pressed;
+            Choice = 4;
+   
+    push Choice into guesses array
 
 question++
 
@@ -30,6 +46,10 @@ if all the answers are answered
     calculateGuess()
 
 calculateGuess ()
+    let q1 = guesses[0] ...
+    let w = 1
+    //weights are calculated through excel
+
     numberGuess = (q1 * weight1) + (q2 * weight2) ... (q10 * w10)
 
     print(userNum) 
