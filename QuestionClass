@@ -1,0 +1,67 @@
+class Question {
+	constructor(text, type) {
+		this.text = text;
+		this.type = type;
+		this.buttons = [];
+	}
+
+	display() {
+		text(this.text, 20, 30);
+	}
+
+	createButtons(answerCallback) {
+		this.removeButtons();
+
+		if (this.type === "yesno") {
+			let yesBtn = createButton("Yes");
+			let noBtn = createButton("No");
+
+			yesBtn.position(20, 60);
+			noBtn.position(80, 60);
+
+			yesBtn.mousePressed(() => answerCallback(2));
+			noBtn.mousePressed(() => answerCallback(1));
+
+			this.buttons.push(yesBtn, noBtn);
+		}
+
+		if (this.type === "starbucks") {
+			let tall = createButton("Tall");
+			let grande = createButton("Grande");
+			let venti = createButton("Venti");
+
+			tall.position(20, 60);
+			grande.position(80, 60);
+			venti.position(160, 60);
+
+			tall.mousePressed(() => answerCallback(1));
+			grande.mousePressed(() => answerCallback(2));
+			venti.mousePressed(() => answerCallback(3));
+
+			this.buttons.push(tall, grande, venti);
+		}
+
+		if (this.type === "season") {
+			let Summer = createButton("Summer");
+			let Winter = createButton("Winter");
+			let Fall = createButton("Fall");
+			let Spring = createButton("Spring");
+
+			Summer.position(20, 60);
+			Winter.position(100, 60);
+			Fall.position(160, 60);
+			Spring.position(200, 60);
+
+			Fall.mousePressed(() => answerCallback(1));
+			Winter.mousePressed(() => answerCallback(2));
+			Spring.mousePressed(() => answerCallback(3));
+			Summer.mousePressed(() => answerCallback(4));
+			this.buttons.push(Summer, Winter, Spring, Fall);
+		}
+	}
+
+	removeButtons() {
+		this.buttons.forEach(btn => btn.remove());
+		this.buttons = [];
+	}
+}
