@@ -6,8 +6,13 @@ let numberGuess;
 let Choice ;
 let guesses = [];
 let totalAns;
+let screenstate = 0;
 
 class Question 
+type of question
+text
+position
+
 
 for each question:
     if yes/no type question;
@@ -36,10 +41,9 @@ for each question:
    
     push Choice into guesses array
 
-question++
-
-    //store the ints from ans into the array
-
+    question++
+    //store the ints from choices into the array
+    //screenstate++
 
 if all the answers are answered
     clearCanvas
